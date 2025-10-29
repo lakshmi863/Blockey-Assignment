@@ -23,7 +23,9 @@ Map:
 ---
 
 ## live demo 
-<https://blockey-assignment.vercel.app>
+( https://drive.google.com/file/d/1fnTQCQp8YNByms3IU_pyyHC_Kf6Pn8DX/view?usp=drive_link )
+resume link :
+https://drive.google.com/file/d/17HeHalru2dHGZlD-85ehvjbSVPdpYqt6/view?usp=drive_link
 
 ## Key Features
 
