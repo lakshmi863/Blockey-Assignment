@@ -134,7 +134,7 @@ function VehicleMap({ tripId, setCurrentPosition }) {
 
     return (
         <div ref={mapContainerRef} className="h-full w-full relative">
-            <div className="absolute top-4 left-4 z-[1000] p-3 bg-white shadow-xl rounded-lg">
+            <div className="absolute top-4 right-4 z-[1000] p-3 bg-white shadow-xl rounded-lg">
                 <div className="flex flex-col gap-2">
                     <button onClick={handleTogglePlay} className={`px-3 py-1 text-white font-semibold rounded-lg transition text-sm ${localIsPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'}`}>
                         {localIsPlaying ? 'Pause Sim' : 'Play Sim'}

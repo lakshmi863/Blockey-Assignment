@@ -1,28 +1,26 @@
-// File: C:\Users\Lenovo\Desktop\Assignment\Frontend\src\components\FilterControls.js (FINAL)
+// File: C:\Users\Lenovo\Desktop\Assignment\Frontend\src\components\FilterControls.js (Single Card Layout)
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { X } from 'lucide-react';
 
-function FilterControls({ onApplyFilter, initialTripId }) { // *** Updated prop name ***
+function FilterControls({ onApplyFilter, initialTripId }) {
   const [reports, setReports] = useState([]); 
   const [activeFilter, setActiveFilter] = useState('This Week');
-  
-  const [selectedTrip, setSelectedTrip] = useState(initialTripId); // State now tracks trip_id
+  const [selectedTrip, setSelectedTrip] = useState(initialTripId);
 
   const dateFilters = ["Today", "Yesterday", "This Week", "Previous Week", "This Month", "Previous Month", "Custom"];
 
   useEffect(() => {
     const fetchReports = async () => {
         try {
-            // *** NEW ENDPOINT CALLED ***
             const response = await fetch('https://blockey-assignment.onrender.com/api/reports/list');
             if (!response.ok) throw new Error("Failed to fetch reports list");
             
             const data = await response.json();
             setReports(data);
 
-            // Initialize selection using the new data structure
             if (data.length > 0 && !selectedTrip) {
-                setSelectedTrip(data[0].trip_id); // Initialize with the first TRIP ID
+                setSelectedTrip(data[0].trip_id);
             }
         } catch (error) {
             console.error("Error fetching routes/reports for dropdown:", error);
@@ -36,7 +34,6 @@ function FilterControls({ onApplyFilter, initialTripId }) { // *** Updated prop 
   };
 
   const handleApply = () => {
-    // *** UPDATED KEY NAME ***
     onApplyFilter({ 
       tripId: selectedTrip, 
       dateFilter: activeFilter 
@@ -47,56 +44,73 @@ function FilterControls({ onApplyFilter, initialTripId }) { // *** Updated prop 
     onApplyFilter(null); 
   }
 
+  // --- CHANGES ARE IN THE RETURN STATEMENT BELOW ---
   return (
-    <div className="absolute inset-0 z-[1000] bg-black bg-opacity-5" onClick={handleClose}>
-      <div className="absolute bottom-16 left-4 bg-white rounded-lg shadow-xl p-4 w-64" onClick={stopPropagation}>
-        <h3 className="text-md font-semibold mb-2 text-gray-700">REPORT LIST</h3>
+    // Full screen overlay with a semi-transparent background, centered content
+    <div 
+      className="absolute inset-0 z-[1000] bg-black bg-opacity-40 flex items-center justify-center" 
+      onClick={handleClose}
+    >
+      {/* Single, animated card that contains all controls */}
+      <motion.div
+        className="bg-white rounded-xl shadow-2xl flex overflow-hidden"
+        onClick={stopPropagation}
+        initial={{ opacity: 0, y: 30 }} // Animate in from bottom
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: 'easeOut' }}
+      >
+        {/* Section 1: Report List */}
+        <div className="p-6 border-r border-gray-200 w-[280px]">
+          <h3 className="text-md font-semibold mb-3 text-gray-700">REPORT LIST</h3>
+          <select 
+              className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={selectedTrip || ""} 
+              onChange={(e) => setSelectedTrip(e.target.value)} 
+          >
+            <option value="" disabled>Select a Historical Trip...</option>
+            {reports.map(report => (
+                <option key={report.trip_id} value={report.trip_id}>
+                    {report.route_name} - ({report.report_context})
+                </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Section 2: Date Filter Context */}
+        <div className="p-6 border-r border-gray-200 w-[200px]">
+          <h3 className="text-md font-semibold mb-3 text-gray-700">REPORT CONTEXT</h3>
+          <ul className="list-none p-0 m-0 text-gray-800 space-y-1">
+            {dateFilters.map(filter => (
+               <li key={filter}
+                  onClick={() => setActiveFilter(filter)}
+                  className={`p-2 rounded-md cursor-pointer transition-colors text-sm ${
+                      activeFilter === filter ? 'bg-blue-600 text-white font-semibold' : 'hover:bg-gray-100'
+                  }`}
+               >
+                 {filter}
+               </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Section 3: Action Buttons */}
+        <div className="p-2 flex flex-col items-center justify-center gap-4 w-[140px]">
+          <button
+            onClick={handleClose}
+            className="w-full bg-gray-200 text-gray-600 font-bold py-2 px-1 rounded-lg hover:bg-gray-300 transition-colors flex items-center justify-center"
+          >
+            <X size={20} />
+          </button>
+          <button
+            onClick={handleApply}
+            className="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
+          >
+            SHOW
+          </button>
+          
+        </div>
         
-        <select 
-            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            value={selectedTrip || ""} 
-            onChange={(e) => setSelectedTrip(e.target.value)} 
-        >
-          <option value="" disabled>Select a Historical Trip...</option>
-
-          {reports.map(report => (
-              <option key={report.trip_id} value={report.trip_id}>
-                  {report.route_name} - ({report.report_context})
-              </option>
-          ))}
-        </select>
-
-      </div>
-
-      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 bg-white shadow-xl rounded-md p-2 w-48" onClick={stopPropagation}>
-        <ul className="list-none p-0 m-0 text-gray-800">
-          {dateFilters.map(filter => (
-             <li key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`p-2 rounded-md cursor-pointer transition-colors text-sm ${
-                    activeFilter === filter ? 'bg-blue-600 text-white font-semibold' : 'hover:bg-gray-100'
-                }`}
-             >
-               {filter}
-             </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="absolute bottom-16 right-48 flex items-center gap-4" onClick={stopPropagation}>
-        <button
-          onClick={handleApply}
-          className="bg-blue-600 text-white font-bold py-2 px-8 rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
-        >
-          SHOW
-        </button>
-        <button
-          onClick={handleClose}
-          className="p-3 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors flex items-center justify-center shadow-lg"
-        >
-          <X size={20} />
-        </button>
-      </div>
+      </motion.div>
     </div>
   );
 }
