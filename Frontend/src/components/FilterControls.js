@@ -14,7 +14,7 @@ function FilterControls({ onApplyFilter, initialTripId }) { // *** Updated prop 
     const fetchReports = async () => {
         try {
             // *** NEW ENDPOINT CALLED ***
-            const response = await fetch('http://localhost:3001/api/reports/list');
+            const response = await fetch('https://blockey-assignment.onrender.com/api/reports/list');
             if (!response.ok) throw new Error("Failed to fetch reports list");
             
             const data = await response.json();

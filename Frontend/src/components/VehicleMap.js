@@ -44,7 +44,7 @@ function VehicleMap({ tripId, dateFilter, isPlaying: parentIsPlaying, setCurrent
             
             try {
                 // Fetch using the new tripId from the backend /api/trips/:tripId
-                const stopsResponse = await fetch(`http://localhost:3001/api/trips/${tripId}`);
+                const stopsResponse = await fetch(`https://blockey-assignment.onrender.com/api/trips/${tripId}`);
                 if (!stopsResponse.ok) throw new Error("Could not fetch route points.");
                 
                 const data = await stopsResponse.json(); 

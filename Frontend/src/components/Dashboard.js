@@ -13,7 +13,7 @@ function Dashboard({ context }) { // Context comes from App.js (e.g., 'Today', '
             setIsLoading(true);
             try {
                 // *** UPDATED: Fetching actual aggregated data from the new backend API ***
-                const url = `http://localhost:3001/api/dashboard/summary?context=${context}`;
+                const url = `https://blockey-assignment.onrender.com/api/dashboard/summary?context=${context}`;
 
                 const response = await fetch(url);
                 
