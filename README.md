@@ -2,9 +2,12 @@
 
 A full-stack web application designed to visualize and analyze historical vehicle tracking data. It features an interactive map for replaying trips, a dashboard for aggregated analytics, and a backend API to serve the route data.
 
-website LINK (  )
+website LINK ( https://blockey-tech-task.onrender.com )
 
-*(**Note**: Replace the image URL above with a link to your own screenshot if you prefer)*
+Home Page:
+
+<img width="1918" height="1025" alt="image" src="https://github.com/user-attachments/assets/a499dca2-1237-4789-a2e0-02cd7c47c6cb" />
+
 
 ---
 
