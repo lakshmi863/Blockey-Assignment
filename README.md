@@ -2,7 +2,7 @@
 
 A full-stack web application designed to visualize and analyze historical vehicle tracking data. It features an interactive map for replaying trips, a dashboard for aggregated analytics, and a backend API to serve the route data.
 
-![Vehicle Tracker Demo](https://i.imgur.com/8f10jG9.png)
+website LINK (  )
 
 *(**Note**: Replace the image URL above with a link to your own screenshot if you prefer)*
 
