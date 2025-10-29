@@ -1,0 +1,18 @@
+{
+  "name": "vehicle-tracker-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",  
+  "scripts": {
+    "start": "node index.js",
+    "db:init": "node scripts/database-init.js",
+    "db:seed": "node scripts/seed.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "socket.io": "^4.5.4",
+    "sqlite3": "^5.1.2"
+  }
+}

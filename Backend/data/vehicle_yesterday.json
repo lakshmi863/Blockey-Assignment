@@ -1,0 +1,92 @@
+[{
+  "name": "VZ Trip - Yesterday",
+  "vehicleNumber": "VZTRK02",
+  "vehicleType": "Truck",
+  "vehicleModel": "Ashok Leyland",
+  "fuelType": "Diesel",
+  "tankCapacity": 120,
+  "dataType": "vehicle tracking",  
+  "driverHeartRate": 72,
+  "driverSleepHours": 8.0,
+  "points": [
+    { "latitude": 17.7059, "longitude": 83.3041, "timestamp": "2025-10-28T12:00:00Z", "name": "Start - Kailasagiri Foothills" },
+    { "latitude": 17.7110, "longitude": 83.3100, "timestamp": "2025-10-28T12:05:00Z", "name": "Waypoint - Submarine Museum Vicinity" },
+    { "latitude": 17.7165, "longitude": 83.3155, "timestamp": "2025-10-28T12:10:00Z", "name": "Waypoint - RK Beach Area" },
+    { "latitude": 17.7180, "longitude": 83.3180, "timestamp": "2025-10-28T12:15:00Z", "name": "Waypoint - War Memorial Approach" },
+    { "latitude": 17.7205, "longitude": 83.3210, "timestamp": "2025-10-28T12:20:00Z", "name": "Waypoint - City Center Transition" },
+    { "latitude": 17.7230, "longitude": 83.3250, "timestamp": "2025-10-28T12:25:00Z", "name": "Waypoint - Commercial Hub" },
+    { "latitude": 17.7240, "longitude": 83.3285, "timestamp": "2025-10-28T12:30:00Z", "name": "Waypoint - Park Area" },
+    { "latitude": 17.7245, "longitude": 83.3320, "timestamp": "2025-10-28T12:35:00Z", "name": "Waypoint - Near RR Garden" },
+    { "latitude": 17.7220, "longitude": 83.3300, "timestamp": "2025-10-28T12:40:00Z", "name": "Waypoint - Inland Turn" },
+    { "latitude": 17.7190, "longitude": 83.3280, "timestamp": "2025-10-28T12:45:00Z", "name": "End - Bus Stand Area" }
+  ]
+},
+{
+  "name": "HYD Run - Yesterday",
+  "vehicleNumber": "HYD002B",
+  "vehicleType": "Truck",
+  "vehicleModel": "Tata H-Series",
+  "fuelType": "Diesel",
+  "tankCapacity": 120,
+  "dataType": "vehicle tracking",  
+  "driverHeartRate": 72,
+  "driverSleepHours": 8.0,
+  "points": [
+    { "latitude": 17.4118, "longitude": 78.4358, "timestamp": "2025-10-28T12:00:00Z", "name": "HITEC City - Gachibowli Area" },
+    { "latitude": 17.4135, "longitude": 78.4369, "timestamp": "2025-10-28T12:05:00Z", "name": "Raidurg Signal" },
+    { "latitude": 17.4152, "longitude": 78.4380, "timestamp": "2025-10-28T12:10:00Z", "name": "Cyber Towers Access" },
+    { "latitude": 17.4169, "longitude": 78.4391, "timestamp": "2025-10-28T12:15:00Z", "name": "Mindspace Entry Gate" },
+    { "latitude": 17.4186, "longitude": 78.4402, "timestamp": "2025-10-28T12:20:00Z", "name": "Botanical Garden Approach" },
+    { "latitude": 17.4245, "longitude": 78.4421, "timestamp": "2025-10-28T12:25:00Z", "name": "Wipro Circle Junction" },
+    { "latitude": 17.4240, "longitude": 78.4445, "timestamp": "2025-10-28T12:30:00Z", "name": "Area Entrance C" },
+    { "latitude": 17.4235, "longitude": 78.4469, "timestamp": "2025-10-28T12:35:00Z", "name": "Main Road Segment" },
+    { "latitude": 17.4228, "longitude": 78.4491, "timestamp": "2025-10-28T12:40:00Z", "name": "Residential Area Exit" },
+    { "latitude": 17.4221, "longitude": 78.4513, "timestamp": "2025-10-28T12:45:00Z", "name": "End - Kondapur Link" }
+  ]
+},{
+  "name": "BLR Trip - Yesterday",
+  "vehicleNumber": "KA01BZ4568",
+  "vehicleType": "Car",
+  "vehicleModel": "Sedan XYZ",
+  "fuelType": "Electrical",
+  "tankCapacity": null, 
+  "dataType": "vehicle tracking",  
+  "driverHeartRate": 69,
+  "driverSleepHours": 8.2,
+  "points": [
+    { "latitude": 12.9716, "longitude": 77.5946, "timestamp": "2025-10-28T08:00:00Z", "name": "Start - Majestic Circle" },
+    { "latitude": 12.9750, "longitude": 77.5850, "timestamp": "2025-10-28T08:05:00Z", "name": "Waypoint 2 - K.R. Market area" },
+    { "latitude": 12.9800, "longitude": 77.5750, "timestamp": "2025-10-28T08:10:00Z", "name": "Waypoint 3 - Majestic Side Rd" },
+    { "latitude": 12.9855, "longitude": 77.5710, "timestamp": "2025-10-28T08:15:00Z", "name": "Waypoint 4 - Cantonment Vicinity" },
+    { "latitude": 12.9900, "longitude": 77.5655, "timestamp": "2025-10-28T08:20:00Z", "name": "Waypoint 5 - Cubbon Park Approach" },
+    { "latitude": 12.9950, "longitude": 77.5750, "timestamp": "2025-10-28T08:25:00Z", "name": "Waypoint 6 - Near Vidhana Soudha" },
+    { "latitude": 13.0050, "longitude": 77.5900, "timestamp": "2025-10-28T08:30:00Z", "name": "Waypoint 7 - Commercial St. Entrance" },
+    { "latitude": 13.0100, "longitude": 77.6000, "timestamp": "2025-10-28T08:35:00Z", "name": "Waypoint 8 - M.G. Road Area" },
+    { "latitude": 13.0020, "longitude": 77.6100, "timestamp": "2025-10-28T08:40:00Z", "name": "Waypoint 9 - Chinnaswamy Stadium area" },
+    { "latitude": 12.9980, "longitude": 77.6050, "timestamp": "2025-10-28T08:45:00Z", "name": "End - Silk Board Junc" }
+  ]
+},
+{
+  "name": "MUM Trip - Yesterday",
+  "vehicleNumber": "MUM002N",
+  "vehicleType": "Car",
+  "vehicleModel": "Electric Hatchback",
+  "fuelType": "Electrical",
+  "tankCapacity": null, 
+  "dataType": "vehicle tracking",  
+  "driverHeartRate": 69,
+  "driverSleepHours": 8.1,
+  "points": [
+    { "latitude": 19.0760, "longitude": 72.8777, "timestamp": "2025-10-28T14:00:00Z", "name": "MUM Start - Marine Drive" },
+    { "latitude": 19.0790, "longitude": 72.8850, "timestamp": "2025-10-28T14:05:00Z", "name": "Waypoint 2 - Nariman Point" },
+    { "latitude": 19.0825, "longitude": 72.8900, "timestamp": "2025-10-28T14:10:00Z", "name": "Waypoint 3 - Churchgate Station" },
+    { "latitude": 19.0870, "longitude": 72.8950, "timestamp": "2025-10-28T14:15:00Z", "name": "Waypoint 4 - CSMT Area" },
+    { "latitude": 19.0950, "longitude": 72.8980, "timestamp": "2025-10-28T14:20:00Z", "name": "Waypoint 5 - Dongri Cross Rd" },
+    { "latitude": 19.1050, "longitude": 72.9150, "timestamp": "2025-10-28T14:25:00Z", "name": "Waypoint 6 - Lalbaug Flyover" },
+    { "latitude": 19.1150, "longitude": 72.9250, "timestamp": "2025-10-28T14:30:00Z", "name": "Waypoint 7 - Lalbaug End" },
+    { "latitude": 19.1200, "longitude": 72.9300, "timestamp": "2025-10-28T14:35:00Z", "name": "Waypoint 8 - Parel Junction" },
+    { "latitude": 19.1250, "longitude": 72.9350, "timestamp": "2025-10-28T14:40:00Z", "name": "Waypoint 9 - Hindmata Circle" },
+    { "latitude": 19.1300, "longitude": 72.9400, "timestamp": "2025-10-28T14:45:00Z", "name": "End - Dadar East Stop" }
+  ]
+}
+]

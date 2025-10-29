@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Make the entire application fill the viewport height */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+/* Ensure the Leaflet container inside our app also gets full height */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* In index.css */
+/* In index.css */
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-scroll {
+  animation: marquee 50s linear infinite;
+  white-space: nowrap;
+  display: inline-block;
+  padding-left: 100%; 
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%; 
+  display: inline-block;
+}
